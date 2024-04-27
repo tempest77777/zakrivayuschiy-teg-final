@@ -381,13 +381,9 @@
   min-width: 100%;
   text-transform: uppercase;
   padding: 12px 0;
-  border: none;
   border: 2px solid var(--border-color);
   background-color: var(--bg-color);
   font-family: var(--accent-font-family);
   font-size: 14px;
   /* transition: box-shadow 0.3s ease; */
-}
-.card__content {
-  padding: 30px;
 }
