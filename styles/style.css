@@ -40,6 +40,7 @@
   display: grid;
   justify-items: center;
   gap: 20px;
+  padding-top: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
 }
 
 .header__title {
@@ -128,14 +129,16 @@
   transition: transform 0.3s ease;
 }
 
-.card__cover {
-  margin-block-end: 27px;
-}
 
 .card__cover-image {
   object-fit: cover;
   object-position: center;
-  inline-size: 100%;
+  display: flex;
+  padding: 0;
+  /* inline-size: 100%; */
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .card__content {
@@ -164,12 +167,17 @@
 .card__footer {
   display: flex;
   justify-content: end;
+  align-items: center;
+  gap: 0.6rem;
   padding-inline: 25px;
   margin-block-start: 20px;
   margin-block-end: 20px;
 }
 
 .card__icon-button {
+  display: flex;
+  align-items: center;
+  padding: 0;
   border: none;
   cursor: pointer;
   background-color: var(--bg-color);
@@ -218,7 +226,6 @@
 }
 
 .button:focus-visible {
-  border: 2px solid var(--accent-color);
   box-shadow: 2px 2px 0 0 var(--accent-color);
 }
 
@@ -239,7 +246,6 @@
   inset-block-start: 0;
   scale: 0 1;
   transform-origin: left;
-  transition: scale 0.5s ease-in-out, color 1s ease;
 }
 
 .button__text {
@@ -249,14 +255,16 @@
   mix-blend-mode: difference;
 }
 
-.footer {
+.button__wrapper {
+  margin: 0 auto;
   display: grid;
   justify-content: center;
+  align-items: center;
   inline-size: var(--width);
   padding: 50px 0 102px 0;
 }
 
-.footer_button {
+.button-save {
   position: relative;
   min-inline-size: 306px;
   max-inline-size: 350px;
@@ -278,6 +286,18 @@
   z-index: 10;
 }
 
+.floppy-svg {
+  fill: var(--hover-color);
+  width: 20px;
+  height: 20px;
+  mix-blend-mode: difference;
+}
+
+.modal__wrapper .floppy-svg {
+  min-height: 39px;
+  min-width: 39px;
+}
+
 @media (width <= 410px) {
   :root {
     --width: 100%;
@@ -287,6 +307,12 @@
     margin-block-start: 10px;
     padding-top: 8px;
 
+  }
+
+  .floppy-svg {
+    width: 28px;
+    height: 28px;
+    margin-right: 0;
   }
 
   .footer_button {
@@ -299,6 +325,7 @@
 }
 .card__image-wrapper {
   position: relative;
+  border-bottom: 2px solid var(--border-color);
 }
 
 .card__image-label {
@@ -351,6 +378,7 @@
   border: 2px solid var(--border-color);
 }
 .modal__wrapper {
+  background-color: var(--bg-color);
   padding: 30px;
 }
 .modal__content {
@@ -361,17 +389,6 @@
   margin-bottom: 30px;
 }
 
-.floppy-svg {
-  fill: var(--hover-color);
-  width: 20px;
-  height: 20px;
-  mix-blend-mode: difference;
-}
-
-.modal__wrapper .floppy-svg {
-  min-height: 39px;
-  min-width: 39px;
-}
 .modal__title {
   text-transform: uppercase;
   font-size: 14px;

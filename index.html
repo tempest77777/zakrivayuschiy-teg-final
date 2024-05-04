@@ -539,36 +539,38 @@
           </button>
         </div>
       </article>
-    </main>
-    <footer class="footer">
-      <button type="button" class="button footer_button">
-        <svg viewBox="0 0 21 21" class="floppy-svg">
-          <use href="./svg/floppy.svg#floppy-svg" />
-        </svg>
-        <span
-          class="button__text"
-          onclick="window['dialog-id'].showModal()"
-          aria-controls="dialog-id"
-          >Сохранить на память</span
-        >
-      </button>
 
-      <dialog id="dialog-id" class="modal">
-        <div class="modal__wrapper">
-          <form method="dialog">
-            <div class="modal__content">
-              <svg viewBox="0 0 21 21" class="floppy-svg">
-                <use href="./svg/floppy.svg#floppy-svg" />
-              </svg>
-              <p class="modal__title">Вставьте дискету, чтобы продолжить</p>
-            </div>
-            <button type="button" class="button modal__button">
-              <span class="button__text">ok</span>
-            </button>
-          </form>
-        </div>
-      </dialog>
-    </footer>
+      <section class="button__wrapper">
+        <button type="button" class="button button-save"          
+        onclick="window['dialog-id'].showModal()"
+        aria-controls="dialog-id">
+          <svg viewBox="0 0 21 21" class="floppy-svg">
+            <use href="./svg/floppy.svg#floppy-svg" />
+          </svg>
+          <span
+            class="button__text"
+  
+            >Сохранить на память</span
+          >
+        </button>
+  
+        <dialog id="dialog-id" class="modal">
+          <div class="modal__wrapper">
+            <form method="dialog">
+              <div class="modal__content">
+                <svg viewBox="0 0 21 21" class="floppy-svg">
+                  <use href="./svg/floppy.svg#floppy-svg" />
+                </svg>
+                <p class="modal__title">Вставьте дискету, чтобы продолжить</p>
+              </div>
+              <button type="submit" class="button modal__button">
+                <span class="button__text">ok</span>
+              </button>
+            </form>
+          </div>
+        </dialog>
+      </section>
+    </main>
     <script src="./scripts/set-theme.js"></script>
     <script src="./scripts/like.js"></script>
   </body>
